@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.spring.constructor.ClassConB" name="reffB">
+		<constructor-arg value="Class B Constructor" />
+	</bean>
+
+	<bean class="com.spring.constructor.ClassConA" name="reffA">
+		<constructor-arg value="100" />
+		<constructor-arg ref="reffB" />
+		<constructor-arg name="list1">
+			<list>
+				<value>500</value>
+				<value>600</value>
+			</list>
+		</constructor-arg>
+	</bean>
+
+</beans>

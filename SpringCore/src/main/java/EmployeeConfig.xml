@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.Lib.Spring.Utils.EmployeeDetails" name="emp1">
+		<property name="empid" value="100" />
+		<property name="name" value="Pradeep Rout" />
+		<property name="address">
+			<list>
+				<value>CTC</value>
+				<value>BBSR</value>
+				<value>RKL</value>
+			</list>
+		</property>
+		<property name="contact">
+			<set>
+				<value>123456</value>
+				<value>654321</value>
+				<value>909090</value>
+			</set>
+		</property>
+		
+		<property name="payscale">
+			<map>
+				<entry key = "U1" value="20000" />
+				<entry key = "U2" value="30000" />
+				<entry key = "U3" value="40000" />
+				<entry key = "U4" value="50000" />
+			</map>
+		</property>
+	</bean>
+
+</beans>
